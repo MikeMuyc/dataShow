@@ -1,7 +1,3 @@
-# ts-demo
-
-typescript版本项目初始化demo
-
 ## Project setup
 ```
 npm install
@@ -16,4 +12,11 @@ npm run serve
 ```
 npm run build
 ```
-含有authox模块，地图模块以及echarts的example。
+### Compiles and minifies for production
+```
+npm run build
+```
+### preview
+```
+https://mikemuyc.github.io/dataShow/dist/index
+```
