@@ -1,0 +1,211 @@
+$font-sans: "Microsoft YaHei", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti; //字体
+
+/* 颜色（按主题） */
+/* 颜色（按主题） */
+$color-theme-main: #0a0d37; // 主题色
+$color-theme-sideBar: #050619; // 侧边栏色
+$color-theme-sideBar-select: linear-gradient(90deg,#3c71f7 0%,#4959f0 50%,#5541e8 100%); // 侧边栏选中色
+$color-theme-split: #e3e7ed; // 分割线颜色
+$color-theme-success: #47bf63; // 成功色
+$color-theme-error:#fe5339;//错误色
+
+$theme-orange:#ff5a3a;
+$theme-yellow:#FFC600;
+$theme-blue:#2960f0;
+$normalBorderColor:#d7dee3;                   //通用边框颜色
+$normal-border: 1px solid $normalBorderColor; //通用边框样式
+$grayBackground:#F5F5F5;
+
+
+/* 颜色（安防渐变色） */
+$color-security-main1-gradient: linear-gradient(270deg, #1245c6 0%, #3c88f9 100%); //安防渐变色1
+$color-security-main2-gradient: linear-gradient(270deg, #257aff 0%, #009ffb 100%);//安防渐变色2
+$color-security-main3-gradient: linear-gradient(90deg, #4979fa 0%, #525df2 100%), linear-gradient(270deg, #cb2d3e 0%, #ef473a 100%);//安防渐变色3
+$color-security-green-gradient: linear-gradient(90deg, #21ce72 0%, #09ab65 100%);//安防渐变色4
+$color-security-orange-gradient: linear-gradient(90deg, #ffba00 0%, #f39700 100%);//安防渐变色5
+$color-security-main-gradient: linear-gradient(270deg, #ff6612 0%, #ff810a 100%);//安防渐变色6
+
+/* 颜色（按字体） */
+$color-font-title: #333333; // 标题
+$color-font-content: #666666; // 正文
+$color-font-input: #333333; // 输入框
+$color-font-link: #248ef1; // 链接
+$color-font-error: #fe4c4c; // 错误或者状态1
+$color-font-note: #ffae00; // 备注或者状态2
+$color-font-prompt: #29b249; // 提示或者状态3
+
+/* 颜色（按场景） */
+$color-usage-divider: #e3e7ed; // 分隔线
+$color-usage-background: #fff; // 背景
+$color-usage-table-double:#f7f7f7;//双行
+$color-usage-table-hover: #e2e7f9; // 列表悬停
+$color-usage-table-stripe: #7d81fa; // 列表选中条纹
+
+/* 文字 */
+@mixin text($color, $size: 14px) {
+  color: $color;
+  font-size: $size;
+}
+
+/* 按钮 */
+@mixin button($color, $background-color, $border-color) {
+  color: $color;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: $background-color;
+  border: 1px solid $border-color;
+  border-radius: 2px;
+  cursor: pointer;
+}
+@mixin button-default { /*默认按钮*/
+  @include button(#6981fb, #fff, #6981fb);
+}
+@mixin button-default-hover {
+  @include button-default;
+  box-shadow: 0 2px 5px 0 rgba(54, 59, 233, 0.3);
+}
+@mixin button-default-pressed {
+  @include button-default;
+  box-shadow: 0 2px 5px 0 rgba(54, 59, 233, 0.3);
+}
+@mixin button-disabled { /*默认禁用按钮*/
+  @include button(#999, #ddd, transparent);
+  cursor: not-allowed;
+}
+@mixin button-determine{/*确定按钮*/
+  @include button(#fff, #5458e0, transparent);
+}
+@mixin button-determine-hover {
+  @include button-determine;
+  box-shadow: 0 2px 5px 0 rgba(54, 59, 233, 0.3);
+}
+@mixin button-determine-pressed {
+  @include button(#fff, #4246c2, transparent);
+}
+@mixin button-cancel{ /*取消按钮*/
+  @include button(#333333, #f0f0f0, dddddd);
+}
+@mixin button-cancel-hover {
+  @include button-cancel;
+  box-shadow: 0 2px 5px 0 rgba(169, 169, 169, 0.3);
+}
+@mixin button-cancel-pressed {
+  @include button(#fff, #eaeaea, #dddddd);
+}
+@mixin button-size-large {
+  width: 400px;
+  height: 50px;
+  font-size: 18px;
+}
+@mixin button-size-small {
+  height: 25px;
+  font-size: 12px;
+}
+
+/* 输入框 */
+@mixin input($color, $background-color, $border-color) {
+  padding: 0 9px;
+  color: $color;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: $background-color;
+  border: 1px solid $border-color;
+  border-radius: 2px;
+}
+@mixin input-normal {
+  @include input($color-font-content, #ffffff, #dddddd);
+}
+@mixin input-focus {
+  @include input($color-font-content, #ffffff, #5458e0);
+  box-shadow: inset 0 1px 2px 0 rgba(51, 158, 248, 0.35);
+}
+@mixin input-error {
+  @include input($color-font-content, #ffffff, $color-theme-error);
+  box-shadow: inset 0 1px 2px 0 rgba(254, 83, 57, 0.35);
+}
+@mixin input-disabled {
+  @include input(#999999, #f6f6f6, #dddddd);
+  cursor: not-allowed;
+}
+
+
+
+$primary-color: #0a0d37; //主题色
+$title-color: #343e5c; //标题颜色
+$color: #666; //正文颜色
+$secondary-color: #fff; //二级菜单未选中的字体颜色
+$link-color: #248ef1; //链接颜色
+$error-color: #fe5339; //错误颜色
+$tip-color: #29b249; //提示文字
+$main-bg: #f7f8fa; //正文背景色
+
+$th-bg: #f0f0f0; //表头背景色
+$td-hover-bg: #e2e7f9; //表格悬浮背景色
+$td-active-bg: #e2e7f9; //表格选中行颜色
+$td-stripe-bg: rgba(209, 211, 220, .2); //表格条纹色
+
+$page-color: #5458e0; //分页悬浮字体颜色与选中背景色
+
+$divider-bg: #e3e7ed; //分割线、边框线颜色
+
+//待取色
+$blue-color: #1d94f7;
+$yellow-color: #ffba00;
+$orange-color: #ff8d28;
+$red-color: #fe5339;
+$green-color: #28b779;
+$white-color: #ffffff;
+
+
+@mixin box-shadow($value...) {
+  -webkit-box-shadow: $value;
+  box-shadow: $value;
+}
+
+// 表格样式预设
+@mixin tb-th {
+  height: 40px;
+  line-height: 40px;
+  background-color: $th-bg;
+  color: #333;
+}
+
+@mixin tb-td {
+  height: 40px;
+  line-height: 40px;
+  background: transparent;
+  color: #333;
+}
+
+@mixin scrollbar-diy {
+  /*三角箭头的颜色*/
+  scrollbar-arrow-color: #b9bed1;
+  /*滚动条滑块按钮的颜色*/
+  scrollbar-face-color: #b9bed1;
+  /*滚动条整体颜色*/
+  scrollbar-highlight-color: $white-color;
+  /*滚动条阴影*/
+  scrollbar-shadow-color: $white-color;
+  /*滚动条轨道颜色*/
+  scrollbar-track-color: $white-color;
+  /*滚动条整体部分,必须要设置*/
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: $white-color;
+  }
+  /*滚动条的轨道*/
+  &::-webkit-scrollbar-track {
+    background-color: $white-color;
+  }
+  /*滚动条的滑块按钮*/
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #b9bed1;
+  }
+  /*滚动条的上下两端的按钮*/
+  &::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+  }
+}
