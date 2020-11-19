@@ -7,8 +7,6 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-
-    "@suc/vue-ol": "^1.5.5",
     "core-js": "^2.6.5",
     "echarts": "^4.7.0",
     "element-ui": "^2.10.1",
@@ -31,7 +29,6 @@
     "axios": "^0.19.0",
     "babel-plugin-import": "^1.12.0",
     "compression-webpack-plugin": "^3.0.0",
-    "fibers": "^4.0.1",
     "sass": "^1.22.9",
     "sass-loader": "^7.1.0",
     "ts-import-plugin": "^1.6.1",

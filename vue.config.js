@@ -14,7 +14,6 @@ module.exports = {
     lintOnSave: true,
     publicPath:'./',
     transpileDependencies: [
-        "@suc/authox/plugins/authox-vue",
         /vue-ol/gi,
         'vue-echarts',
         'resize-detector'

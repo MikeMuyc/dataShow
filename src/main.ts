@@ -7,7 +7,7 @@ import { LoadingBar, Modal } from 'iview';
 
 
 
-import VueOl from '@suc/vue-ol';
+import VueOl from '@datashow/vue-ol';
 Vue.use(VueOl);
 
 

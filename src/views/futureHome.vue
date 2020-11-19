@@ -2,7 +2,7 @@
     <div id="futureHome">
         <div class="healthHouse"></div>
         <div class="squarePosition"></div>
-        <div class="logoTitle">瓜山未来社区综合管理平台</div>
+        <div class="logoTitle">未来社区综合管理平台</div>
         <div class="date_show">
             <em class="date_num">{{myDate.year}}</em>
             <i>年</i>
